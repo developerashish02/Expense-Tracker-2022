@@ -1,7 +1,8 @@
 import ExpenseItem from "./ExpenseItem";
-const NewExpenseComponent = (props) => {
+import "./Expense.css";
+const Expense = (props) => {
 	return (
-		<div>
+		<div className="expenses">
 			<ExpenseItem
 				title={props.expense[0].title}
 				date={props.expense[0].date}
@@ -21,4 +22,4 @@ const NewExpenseComponent = (props) => {
 	);
 };
 
-export default NewExpenseComponent;
+export default Expense;
