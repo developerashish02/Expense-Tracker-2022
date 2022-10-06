@@ -1,4 +1,4 @@
-import NewExpenseComponent from "./Components/Expense";
+import NewExpenseComponent from "./Components/Expense/Expense";
 
 const App = () => {
 	// expense data
