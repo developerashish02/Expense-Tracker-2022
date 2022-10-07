@@ -1,4 +1,5 @@
 import NewExpenseComponent from "./Components/Expense/Expense";
+import NewExpense from "./Components/newexpense/NewExpense";
 
 const App = () => {
 	// expense data
@@ -9,6 +10,7 @@ const App = () => {
 	];
 	return (
 		<div>
+			<NewExpense />
 			<NewExpenseComponent expense={expenseData} />
 		</div>
 	);
