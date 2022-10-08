@@ -32,10 +32,12 @@ const ExpenseForm = (props) => {
 		setDate("");
 		setPrice("");
 	};
+	// showing form
 	const showFormJSX = () => {
 		setForm(true);
 	};
 
+	// cancel form
 	const cancelFormHandler = () => {
 		setForm(false);
 	};
