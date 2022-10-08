@@ -7,20 +7,28 @@ const Expense = (props) => {
 	// Get Expense Years
 	const getExpenseYear = (expenseYear) => {
 		SetExpenseYear(expenseYear);
-		console.log(expenseYear);
 	};
+
+	// Filter Expensese Accounrding to year
+	const filterExpense = props.expense.filter(
+		(expense) => expense.date.getFullYear() === Number(expenseYear)
+	);
+
 	return (
 		<div className="expenses">
 			{/* filter Year  */}
 			<ExpensesFilter selected={expenseYear} onExpenseYear={getExpenseYear} />
 			{/* Render Expense List Dynamically */}
-			{props.expense.map((expense) => (
-				<ExpenseItem
-					title={expense.title}
-					date={expense.date}
-					price={expense.price}
-				/>
-			))}
+			{filterExpense.map((expense, index) => {
+				return (
+					<ExpenseItem
+						title={expense.title}
+						date={expense.date}
+						price={expense.price}
+						key={index}
+					/>
+				);
+			})}
 		</div>
 	);
 };

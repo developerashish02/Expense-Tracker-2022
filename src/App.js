@@ -5,9 +5,9 @@ import NewExpense from "./Components/newexpense/NewExpense";
 const App = () => {
 	// Dummy data
 	const dummyData = [
-		{ title: "Car Inseranse", date: new Date(12, 5, 20), price: 2000 },
-		{ title: "Bike Inseranse", date: new Date(12, 5, 20), price: 4000 },
-		{ title: "Health Inseranse", date: new Date(12, 5, 20), price: 6000 },
+		{ title: "Car Inseranse", date: new Date(2020, 5, 20), price: 2000 },
+		{ title: "Bike Inseranse", date: new Date(2020, 5, 20), price: 4000 },
+		{ title: "Health Inseranse", date: new Date(2020, 5, 20), price: 6000 },
 	];
 	// expense data
 	const [expenseData, setExpenseData] = useState(dummyData);
