@@ -2,6 +2,7 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expense.css";
 import ExpensesFilter from "../ExpenseFilter/ExpensesFilter";
 import { useState } from "react";
+import ExpenseList from "./ExpenseList";
 const Expense = (props) => {
 	const [expenseYear, SetExpenseYear] = useState("2020");
 	// Get Expense Years
@@ -16,19 +17,8 @@ const Expense = (props) => {
 
 	return (
 		<div className="expenses">
-			{/* filter Year  */}
 			<ExpensesFilter selected={expenseYear} onExpenseYear={getExpenseYear} />
-			{/* Render Expense List Dynamically */}
-			{filterExpense.map((expense, index) => {
-				return (
-					<ExpenseItem
-						title={expense.title}
-						date={expense.date}
-						price={expense.price}
-						key={index}
-					/>
-				);
-			})}
+			<ExpenseList item={filterExpense} />
 		</div>
 	);
 };

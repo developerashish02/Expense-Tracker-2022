@@ -1,10 +1,6 @@
 import "./ExpenseItem.css";
-import { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 const ExpenseItem = (props) => {
-	// React Hooks return array we get the value using array destracturing
-	const [title, setTitle] = useState(props.title);
-
 	return (
 		<div className="expense-item">
 			<div className="expense-item__description ">
