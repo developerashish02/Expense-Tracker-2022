@@ -28,7 +28,7 @@ const ExpenseForm = (props) => {
 			price,
 		};
 
-		props.onExpense(expense);
+		props.onSaveExpenseData(expense);
 
 		// Clear inputs
 		setTitle("");

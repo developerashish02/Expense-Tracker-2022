@@ -11,22 +11,16 @@ const Expense = (props) => {
 	};
 	return (
 		<div className="expenses">
+			{/* filter Year  */}
 			<ExpensesFilter selected={expenseYear} onExpenseYear={getExpenseYear} />
-			<ExpenseItem
-				title={props.expense[0].title}
-				date={props.expense[0].date}
-				price={props.expense[0].price}
-			/>
-			<ExpenseItem
-				title={props.expense[1].title}
-				date={props.expense[1].date}
-				price={props.expense[1].price}
-			/>
-			<ExpenseItem
-				title={props.expense[2].title}
-				date={props.expense[2].date}
-				price={props.expense[2].price}
-			/>
+			{/* Render Expense List Dynamically */}
+			{props.expense.map((expense) => (
+				<ExpenseItem
+					title={expense.title}
+					date={expense.date}
+					price={expense.price}
+				/>
+			))}
 		</div>
 	);
 };
